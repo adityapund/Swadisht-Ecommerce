@@ -1,0 +1,76 @@
+@import "../../../css-config/mixins.scss";
+
+.hero-banner {
+    
+    position: relative;
+  
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 780px;
+      display: block; /* Ensures image behaves properly within its container */
+      object-fit: cover; /* Zoom/crop the image to cover the entire container */
+    }
+  
+    @media (max-width: 576px) {
+      /* Small devices (sm) */
+      img {
+        height: 300px; /* Set a fixed height for small screens */
+        max-width: none; /* Allow the image to scale based on its fixed height */
+      }
+    }
+  
+    @media (min-width: 577px) and (max-width: 768px) {
+      /* Medium devices (md) */
+      img {
+        height: 450px; /* Set a fixed height for medium screens */
+        max-width: none; /* Allow the image to scale based on its fixed height */
+      }
+    }
+  
+    @media (min-width: 769px) and (max-width: 992px) {
+      /* Large devices (lg) */
+      img {
+        height: 600px; /* Set a fixed height for large screens */
+        max-width: none; /* Allow the image to scale based on its fixed height */
+      }
+    }
+  
+    @media (min-width: 993px) {
+      /* Extra-large devices (xl) */
+      img {
+        max-height: 780px; /* Default height for extra-large screens */
+        width: 100%; /* Reset width to 100% for XL screens */
+        height: auto; /* Reset height to auto for XL screens */
+      }
+    }
+
+    .ctas {
+        position: absolute;
+        bottom: 20px; /* Adjust as needed for vertical positioning */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+  
+        .banner-cta {
+          text-transform: uppercase;
+          font-size: 13px;
+          font-weight: 500;
+          width: fit-content;
+          border: 2px solid white;
+          padding: 7px 15px;
+          cursor: pointer;
+          background-color: white;
+          border-radius: 20px;
+          color: black;
+  
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+
+  
+  
